@@ -1,0 +1,302 @@
+
+.links
+{
+
+    
+    vertical-align: middle;
+    font-family:'Lucida Sans';
+    float:right;
+    padding-left:3%;
+    font-size:18px;
+    margin-right:20px;
+    text-decoration: none;
+    color:#0375b4;
+    
+}
+#imagePanel{
+  height:20%;
+  
+}
+#cooking{
+  background-image:url(../Images/cooking.png);
+  height:100%;
+  width:30%;
+  display:inline-block;
+  margin:10px;
+  position:relative;
+}
+#pingpong{
+  background-image:url(../Images/pingpong.png);
+  height:100%;
+  display:inline-block;
+  width:30%;
+  float:left;
+  top:0;
+  margin:12px;
+}
+#art{
+  background-image:url(../Images/art.png);
+  height:100%;
+  display:inline-block;
+  width:30%;
+  float:left;
+  top:0;
+  margin:12px;
+}
+#blogBody{
+  width:76%;
+ margin-left:12%;
+ margin-right:12%;
+
+}
+.imgLbl{
+  background-color: #007849;
+  color:white;
+  padding:7px;
+ 
+  vertical-align: text-bottom;
+  bottom:10px;
+  left:10px;
+  position:absolute;
+}
+.nav2
+{
+    background:#e6e6e6;
+   
+     display:inline;
+    text-align: center;
+    
+}
+.topHeader{
+    height:54px;
+    padding-top:10px;
+}
+#blogLayout{
+/*  background-color:#e6e6e6
+*/
+  background-color:white;
+
+}
+
+#blogtitle{
+    font-size:32px;
+    text-align:center;
+    color:#262228;
+    vertical-align: middle;
+   
+    font-family:Brush Script;
+    font-style:oblique;
+    font-weight:bolder;
+    display: table-cell;
+
+   /* background: red; /* For browsers that do not support gradients */
+  /*  background: -webkit-linear-gradient(left, #805BA5 , #BC519E); /* For Safari 5.1 to 6.0 */
+   /* background: -o-linear-gradient(right,#805BA5 , #BC519E); /* For Opera 11.1 to 12.0 */
+   /* background: -moz-linear-gradient(right,#805BA5 , #BC519E); /* For Firefox 3.6 to 15 */
+   /* background: linear-gradient(to right,lightgreen, #D7DD35); /* Standard syntax */
+  background-color:#ffce00;
+
+}
+.sandwichNav{
+
+   background-color:#49205E;
+   width:35px;
+   height:5px;
+   float:left;
+   margin:2px 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  /*Flex items*/
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width:100%;
+    
+  }
+  .list-item {
+      display: flex; 
+    padding: 1em;
+      width: 0%;
+     
+  }
+  .list-content {
+	background-color:yellowgreen;
+  display: flex;
+  flex-direction: column;
+  padding:36px;
+  width: 100%;
+  height:50%;
+  color:#49205E;
+  font-family: sans-serif;
+  }
+ /* -webkit-transition-duration: 1s;
+  -webkit-transition-property:width;
+  transition-duration:1s;
+  transition-delay: 2s;
+  transition-property:width;
+  transform:scale(2,2);
+}
+.grow{
+
+  transform:scale(2,2)
+}*/
+.navContainer{
+  
+  cursor:pointer;
+  width:35px;
+  margin-left:5px;
+  display:inline-block;
+  
+
+}
+.list-content p {
+  flex: 1 0 auto;
+  
+}
+
+
+#sidebar{
+
+  top:0;
+ 
+  z-index:9999;
+ 
+  width:30%;
+  height:100%;
+  background-color:#262228;
+  left:-50%;
+  position: absolute;
+  
+}
+.active  {
+ 
+  animation-duration:1s;
+  animation-name:slide;
+  animation-fill-mode:forwards;
+  
+
+}
+@keyframes slide{
+    from{
+      left:-30%;
+    }
+    to{
+      left:70%;
+    }
+
+}
+
+.inactive{
+    animation-duration:1s;
+    animation-name:slideLeft
+}
+
+@keyframes slideLeft{
+  from {
+    left:70%;
+  }
+  to{
+    left:-30%;
+  }
+
+}
+#menulinksleft{
+    width: 50%;
+    display:inline-block; /*make sure both have this*/
+
+    height:100%;
+}
+#menulinks{
+   width:100%;
+   height:100%;
+   background-color:#007849;
+   display:inline-block;
+   position:relative;
+   height:100%;
+}
+#cross{
+  float:right;
+}
+
+#xSign{
+
+  color:yellowgreen;
+  font-size:30px;
+  float:right;
+  
+}
+
+.sidelinks{
+    margin-left:15px;
+    display:block;
+    padding-top:15px;   
+  }
+  #links{
+    left:40%;
+    top:40%;
+    position: absolute;
+  }
+.linkText{
+   color:yellowgreen;
+   font-family:sans-serif;
+   font-size:26px;
+  
+  
+   cursor:pointer;
+
+
+}
+.catlinks{
+  display:block;
+  margin-bottom:10px;
+}
+.heading{
+   margin-bottom:15px;
+}
+.heading2{
+  margin-top:25px;
+}
+.clear{
+  clear:both;
+}
+#allPosts{
+  float:left;
+  width:80%;
+}
+#sideSection{
+  float:right;
+  display:inline;
+  width:20%;
+  margin-top:30px;
+}
+
+.themeSelection{
+
+  color:white;
+}
+
+@media all and (min-width: 40em) {
+    .list-item {
+      width: 45%;
+    }
+  }
+  @media all and (min-width: 60em) {
+    .list-item {
+      width: 30%;
+    }
+  }
