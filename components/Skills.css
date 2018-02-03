@@ -1,0 +1,29 @@
+.container{
+
+    background-color: lightpink;
+    width:0%;
+    height:0%;
+    
+    
+}
+.invisible{
+    width:0%;
+    height:0%
+}
+
+.animateBox{
+    animation-duration: 3s;
+    animation-name:grow2;
+    animation-fill-mode:forwards;
+}
+
+@keyframes grow2{
+    from{
+        width:0%;
+        height: 0%
+    }
+    to{
+        width:90%;
+        height:90%
+    }
+}

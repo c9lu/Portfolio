@@ -141,19 +141,24 @@ class BlogLayout extends React.Component{
                     <div id="blogBody">
                         <div id="imagePanel">
                             <div id="cooking"><span className="imgLbl">Cooking</span></div>
-                            <div id="pingpong"></div>
+                            <div id="pingpong"><span className="imgLbl starrynight">Ping pong</span></div>
                             <div id="art"></div>
                         </div>
 
                         <div className="clear">
                             <div id="allPosts">
                                 <ul className="list">
+                                    
                                     <li className="list-item">
-                                        <div className="list-content">
-                                            <h2>Title</h2>
+                                       
+                                       <div className="list-content">
+                                      
+                                        <div>
+                                            <h2 className="greenColor">Title</h2>
                                             <img src="http://baconmockup.com/250/200" alt="" />
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eveniet.</p>
 
+                                        </div>
                                         </div>
                                     </li>
 
@@ -203,6 +208,7 @@ class BlogLayout extends React.Component{
                             </div>
                             <div id="sideSection">
                                 <span className="catlinks heading"><b>CATEGORIES</b></span>
+                                <div className="headingLine"></div>
                                 <a href="#" className="catlinks">Category 1</a>
                                 <a href="#" className="catlinks">Category 2</a>
                                 <a href="#" className="catlinks">Category 3</a>

@@ -10,7 +10,7 @@
     font-size:18px;
     margin-right:20px;
     text-decoration: none;
-    color:#0375b4;
+    color:black;
     
 }
 #imagePanel{
@@ -30,7 +30,7 @@
   height:100%;
   display:inline-block;
   width:30%;
-  float:left;
+  position:relative;
   top:0;
   margin:12px;
 }
@@ -39,7 +39,7 @@
   height:100%;
   display:inline-block;
   width:30%;
-  float:left;
+  
   top:0;
   margin:12px;
 }
@@ -81,7 +81,7 @@
 #blogtitle{
     font-size:32px;
     text-align:center;
-    color:#262228;
+    color:black;
     vertical-align: middle;
    
     font-family:Brush Script;
@@ -94,12 +94,12 @@
    /* background: -o-linear-gradient(right,#805BA5 , #BC519E); /* For Opera 11.1 to 12.0 */
    /* background: -moz-linear-gradient(right,#805BA5 , #BC519E); /* For Firefox 3.6 to 15 */
    /* background: linear-gradient(to right,lightgreen, #D7DD35); /* Standard syntax */
-  background-color:#ffce00;
+  background-color:#FE65B7;
 
 }
 .sandwichNav{
 
-   background-color:#49205E;
+   background-color:#262228;
    width:35px;
    height:5px;
    float:left;
@@ -131,18 +131,23 @@ ul, li {
   .list-item {
       display: flex; 
     padding: 1em;
-      width: 0%;
+      width: 100%;
      
   }
   .list-content {
-	background-color:yellowgreen;
+	background-color:white;
   display: flex;
   flex-direction: column;
-  padding:36px;
+  padding:15px;
   width: 100%;
   height:50%;
-  color:#49205E;
+  
   font-family: sans-serif;
+  
+  }
+
+  .listContentPadding{
+    padding:36px;
   }
  /* -webkit-transition-duration: 1s;
   -webkit-transition-property:width;
@@ -233,6 +238,7 @@ ul, li {
   float:right;
 }
 
+
 #xSign{
 
   color:yellowgreen;
@@ -266,11 +272,19 @@ ul, li {
   margin-bottom:10px;
 }
 .heading{
-   margin-bottom:15px;
+   margin-bottom:25px;
 }
 .heading2{
   margin-top:25px;
 }
+
+.headingLine{
+ display:block;
+  height:8px;
+  background-color:#8fc33a; 
+ 
+}
+
 .clear{
   clear:both;
 }
@@ -279,10 +293,12 @@ ul, li {
   width:80%;
 }
 #sideSection{
-  float:right;
+  
   display:inline;
-  width:20%;
-  margin-top:30px;
+  
+
+  padding:20px;
+ 
 }
 
 .themeSelection{
@@ -290,6 +306,33 @@ ul, li {
   color:white;
 }
 
+.sunflowers{
+    background-color:  #FFCE00
+}
+
+.starrynightColor{
+   color:#0375b4
+
+  }
+ .starrynight{
+    background-color: #0375b4;
+ }
+  .green{
+    background-color: #007849;
+  }
+  .greenColor{
+    color:#007849
+  }
+.eveningColor{
+    color:#262228
+}
+
+
+.headingColor{
+  height:5%;
+  display:block;
+  width:100%;
+}
 @media all and (min-width: 40em) {
     .list-item {
       width: 45%;
