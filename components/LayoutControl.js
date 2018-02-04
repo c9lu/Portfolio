@@ -50,13 +50,14 @@ class LayoutControl extends React.Component{
       //  var width = 0.5;
         // $("#displayArea").width($("#displayArea").width * 0.5);
         //$("#displayArea").width('50%') ;  
+       
     }
    render()
    {
    
     return(
-    <div>
-        <iframe id="displayArea" width="100%" height="85%" src={this.props.url}>
+    <div className="container2">
+        <iframe id="displayArea" width="100%" height="100%" src={this.props.url}>
 
         </iframe>
         <div className="controlPanel">

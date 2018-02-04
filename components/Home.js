@@ -10,10 +10,10 @@ import "./Home.css"
 const BoxStyles ={
 
     box:{
-        width: 300,
-        height:300,
+        width: '28%',
+        height:'50%',
         float:'left',
-        margin:15
+        margin:20
 
     },
    
@@ -27,18 +27,8 @@ const BoxStyles ={
     box2:{
         backgroundColor: 'yellow'
     }
-    ,
-    label:{
-        
-        fontColor: 'white',
-        fontSize:20,
-        paddingTop:'45%',
-        width:100,
-        marginLeft:'auto',
-        marginRight:'auto',
-        
-    }
     
+   
 }
 
 
@@ -56,42 +46,53 @@ const BoxStyles ={
 
     cardClicked(gotoUrl)
     {
+        $("#boxes").hide();
         this.cardUrl =  gotoUrl;
-       
+        $("#"+gotoUrl + "Page").show();
         //this.setState({cardUrl:gotoUrl});
         this.forceUpdate();
     }
     cardAnimate(elementId){
+     
+        $("#boxes").hide();
         this.setState({open: true});
-       // $("#"+elementId).addClass("animateBox");
+        $("#"+elementId + "Page").show();
+        // $("#"+elementId).addClass("animateBox");
 
     }
-
+    componentDidMount(){
+        $(".individualPage").hide();
+    }
     render(){
 
-        return ( 
-            <div id="root"> 
-            
-                
-          {this.cardUrl==null || this.cardUrl=="" ? null: <LayoutControl url={this.cardUrl} id="layoutControl" /> }
-          {this.cardUrl==null || this.cardUrl=="" ? <div id="boxes"  style={{height:350, margin:10}}> 
-            <h1>Chen's portfolio</h1>
-            <div style={{height:350, margin:10}}>
-              <div style={Object.assign({},BoxStyles.box, BoxStyles.box1)}>
-                 <div style={BoxStyles.label}>
-                  <a href="#" onClick={this.cardClicked.bind(this, "BlogLayout")}>Responsive Blog design</a>
-                 </div>
-              </div>
-              <div style={Object.assign({}, BoxStyles.box, BoxStyles.box2)} onClick={this.cardAnimate.bind(this, "Skills")}>
+        return (
+            <div id="Home">
+
+                <a href="/"><h1>Chen's portfolio</h1></a>
+                <div id="boxes" style={{ height: '100%', margin: 10 }}>
                     
-              </div>
-             
-              <div style={Object.assign({}, BoxStyles.box, BoxStyles.box3)}></div>
-              </div>
-              <Skills isOpen={this.state.open}   id="Skills"/>
-             
-              </div>:null}
-        </div>
+                  
+                        <div style={Object.assign({}, BoxStyles.box, BoxStyles.box1)}>
+                            <div style={BoxStyles.label}>
+                                <a href="#" onClick={this.cardClicked.bind(this, "BlogLayout")}>Responsive Blog design</a>
+                            </div>
+                        </div>
+                        <div style={Object.assign({}, BoxStyles.box, BoxStyles.box2)} onClick={this.cardAnimate.bind(this, "Skills")}>
+                            <span>Skills</span>
+                        </div>
+
+                        <div style={Object.assign({}, BoxStyles.box, BoxStyles.box3)}></div>
+                    
+                    </div>
+
+                    <div id="SkillsPage" className="individualPage">
+                        <Skills isOpen={this.state.open} id="Skills" />
+                    </div>
+                    <div className="individualPage" id="BlogLayoutPage">
+                        <LayoutControl id="layoutControl"  url={this.cardUrl}/>
+                    </div>
+                
+            </div>
         )}
     
 

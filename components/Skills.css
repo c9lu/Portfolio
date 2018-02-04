@@ -1,6 +1,6 @@
 .container{
 
-    background-color: lightpink;
+    background-color: white;
     width:0%;
     height:0%;
     
@@ -12,7 +12,7 @@
 }
 
 .animateBox{
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-name:grow2;
     animation-fill-mode:forwards;
 }
